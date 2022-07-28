@@ -49,4 +49,4 @@ vars:
     salesforce__opportunity_enhanced: true
     salesforce__contact_enhanced: true
     salesforce__daily_activity: false
-    salesforce__opportunity_line_item_enhanced: 
+    salesforce__opportunity_line_item_enhanced: false
