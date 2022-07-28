@@ -2,8 +2,8 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: salesforce_opportunity_quick_overview
+      description: "Basic transform for Salesforce"
       columns:
           - name: id
             description: "The primary key for this table"
@@ -11,8 +11,8 @@ models:
                 - unique
                 - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
+    - name: salesforce_opportunity_quick_view
+      description: "Basic view for Salesforce"
       columns:
           - name: id
             description: "The primary key for this table"
