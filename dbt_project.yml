@@ -12,10 +12,10 @@ profile: 'dbt_snowflake_contoso_demo'
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-data-paths: ["data"]
+seed-paths: ["data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -23,7 +23,6 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
-
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -36,3 +35,18 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
+
+# Vars
+vars:
+    # Fivetran's Salesforce dbt package vars
+    ## DB settings
+    salesforce_database: JACKM_CONTOSO    
+    salesforce_schema: SALESFORCE
+    ## Model config
+    salesforce__manager_performance: false
+    salesforce__owner_performance: false
+    salesforce__sales_snapshot: true
+    salesforce__opportunity_enhanced: true
+    salesforce__contact_enhanced: true
+    salesforce__daily_activity: false
+    salesforce__opportunity_line_item_enhanced: 
