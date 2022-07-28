@@ -1,11 +1,6 @@
 jobs:
- - name: midnight
+ - name: Midnight Run
    schedule: 0 0 * * * # This will run every day at midnight
    steps:
      - name: run models
        command: dbt run
- - name: deps-trigger
-   schedule: 0 0 1 1 * # This will run once a year
-   steps:
-     - name: run deps
-       command: dbt deps
