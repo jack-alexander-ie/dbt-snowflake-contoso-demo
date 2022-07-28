@@ -50,3 +50,4 @@ vars:
     salesforce__contact_enhanced: true
     salesforce__daily_activity: false
     salesforce__opportunity_line_item_enhanced: false
+    salesforce__order_enabled: false

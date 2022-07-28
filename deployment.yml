@@ -1,5 +1,5 @@
 jobs:
- - name: Midnight Run
+ - name: Midnight Run 😉
    schedule: 0 0 * * * # This will run every day at midnight
    steps:
      - name: run models
