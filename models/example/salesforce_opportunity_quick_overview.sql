@@ -1,7 +1,8 @@
 {{ config(materialized='table') }}
 
 with source_data as (
-    SELECT 
+    SELECT
+        A.ID AS PROSPECT_ACCOUNT_ID, 
         A.NAME PROSPECT_NAME, 
         COUNT(O.ID) AS ACTIVE_OPPORTUNITIES, 
         SUM(O.AMOUNT) AS TOTAL_AMOUNT, 

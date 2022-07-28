@@ -5,7 +5,7 @@ models:
     - name: salesforce_opportunity_quick_overview
       description: "Basic transform for Salesforce"
       columns:
-          - name: id
+          - name: PROSPECT_ACCOUNT_ID
             description: "The primary key for this table"
             tests:
                 - unique
@@ -13,9 +13,3 @@ models:
 
     - name: salesforce_opportunity_quick_view
       description: "Basic view for Salesforce"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
