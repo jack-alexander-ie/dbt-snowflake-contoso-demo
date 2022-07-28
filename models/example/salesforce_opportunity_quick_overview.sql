@@ -12,7 +12,7 @@ with source_data as (
     LEFT JOIN "JACKM_CONTOSO"."SALESFORCE"."ACCOUNT" A 
         ON A.ID = O.ACCOUNT_ID
     WHERE NOT O.IS_CLOSED AND NOT O.IS_WON
-    GROUP BY A.NAME
+    GROUP BY A.ID, A.NAME
 )
 
 select *
