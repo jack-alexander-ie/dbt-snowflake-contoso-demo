@@ -36,12 +36,6 @@ models:
       salesforce:
           materialized: view
 
-sources:
-  - name: CONTOSO_RETAIL_DW_DBO
-    tables:
-      - name: DIMCUSTOMER
-      - name: DIMGEOGRAPHY
-
 # Vars
 vars:
     # Fivetran's Salesforce dbt package vars
