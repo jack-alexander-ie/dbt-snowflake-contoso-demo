@@ -1,0 +1,13 @@
+version: 2
+    
+sources:
+  - name: CONTOSO_RETAIL_DW_DBO
+    description:  'Source definition for Contoso schema'
+    loader: fivetran
+    database: jackm_contoso
+    schema: CONTOSO_RETAIL_DW_DBO
+    tables:
+      - name: DIMCUSTOMER
+        description: 'PII about the customers'
+      - name: DIMGEOGRAPHY
+        decription: 'Region-based metadata'
