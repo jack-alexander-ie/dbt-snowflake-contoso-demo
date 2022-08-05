@@ -1,11 +1,11 @@
 version: 2
     
 sources:
-  - name: CONTOSO_RETAIL_DW_DBO
+  - name: contoso_retail_dw_dbo
     description:  'Source definition for Contoso schema'
     loader: fivetran
     database: jackm_contoso
-    schema: CONTOSO_RETAIL_DW_DBO
+    schema: contoso_retail_dw_dbo
     tables:
       - name: DIMCUSTOMER
         description: 'PII about the customers'
