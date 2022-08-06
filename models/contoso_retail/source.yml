@@ -1,7 +1,7 @@
 version: 2
     
 sources:
-  - name: contoso_retail_dw
+  - name: contoso_retail_dw_dbo
     description:  'Source definition for Contoso schema'
     loader: fivetran
     database: jackm_contoso
