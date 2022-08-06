@@ -12,7 +12,7 @@ with source_data as (
         ROUND(AVG(YEARLYINCOME), 3) AS AVERAGE_INCOME,
         ROUND(AVG(TOTALCHILDREN), 2) AS AVERAGE_NUM_CHILDREN,
         ROUND(AVG(DATEDIFF('year', BIRTHDATE, DATEFIRSTPURCHASE))) AS AVERAGE_AGE_AT_FIRST_PURCHASE
-    FROM {{ source('contoso_retail_dw_dbo', 'dimcustomer') }}
+    FROM {{ source('contoso_retail_dw', 'dimcustomer') }}
     GROUP BY GENDER
 )
 
