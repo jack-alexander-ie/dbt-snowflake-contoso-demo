@@ -9,5 +9,6 @@ sources:
     tables:
       - name: DimCustomer
         description: 'PII about the customers'
+        loaded_at_field: _fivetran_synced
       - name: DimGeography
         decription: 'Region-based metadata'

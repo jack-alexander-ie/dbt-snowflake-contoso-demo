@@ -1,7 +1,0 @@
-version: 2
-
-models:
-  - name: contoso_retail_customer_snapshot
-    description: Testing contoso_retail_customer_snapshot
-  - name: contoso_retail_country_customer_snapshot
-    description: Testing contoso_retail_country_customer_snapshot
