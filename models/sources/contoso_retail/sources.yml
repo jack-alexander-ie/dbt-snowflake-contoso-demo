@@ -2,13 +2,19 @@ version: 2
     
 sources:
   - name: contoso_retail_dw_dbo
-    description:  'Source definition for Contoso schema'
-    # loader: fivetran
-    # database: jackm_contoso
-    # schema: contoso_retail_dw_dbo
+    schema: contoso_retail_dw_dbo
+    database: jackm_contoso
+    loader: fivetran
+    loaded_at_field: _fivetran_synced
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
     tables:
-      - name: DimCustomer
-        description: 'PII about the customers'
+      - name: DimCustomer 
+        identifier: DIMCUSTOMER
         loaded_at_field: _fivetran_synced
       - name: DimGeography
-        decription: 'Region-based metadata'
+        identifier: DIMGEOGRAPHY
+        loaded_at_field: _fivetran_synced
+
