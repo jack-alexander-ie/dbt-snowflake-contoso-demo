@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with source_data as (
+with source as (
     SELECT
         A.ID AS PROSPECT_ACCOUNT_ID, 
         A.NAME PROSPECT_NAME, 
@@ -8,12 +8,12 @@ with source_data as (
         SUM(O.AMOUNT) AS TOTAL_AMOUNT, 
         SUM(O.EXPECTED_REVENUE) TOTAL_EXPECTED_REVENUE,
         MAX(O.LAST_ACTIVITY_DATE) MOST_RECENT_ACTIVITY
-    FROM "JACKM_CONTOSO"."SALESFORCE"."OPPORTUNITY" O
-    LEFT JOIN "JACKM_CONTOSO"."SALESFORCE"."ACCOUNT" A 
+    FROM {{ source('salesforce', 'Opportunity') }} O
+    LEFT JOIN {{ source('salesforce', 'Account') }} A 
         ON A.ID = O.ACCOUNT_ID
     WHERE NOT O.IS_CLOSED AND NOT O.IS_WON
     GROUP BY A.ID, A.NAME
 )
 
 select *
-from source_data
+from source
