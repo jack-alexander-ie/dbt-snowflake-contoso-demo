@@ -7,8 +7,8 @@ with source_data as (
         ROUND(AVG(C.YEARLYINCOME), 3) AS AVERAGE_INCOME,
         ROUND(AVG(C.TOTALCHILDREN), 2) AS AVERAGE_NUM_CHILDREN,
         ROUND(AVG(DATEDIFF('year', BIRTHDATE, DATEFIRSTPURCHASE))) AS AVERAGE_AGE_AT_FIRST_PURCHASE
-    FROM {{ source('contoso_retail_dw', 'dimcustomer') }} C
-    LEFT JOIN {{ source('contoso_retail_dw', 'dimgeography') }} G
+    FROM {{ source('contoso_retail_dw', 'DimCustomer') }} C
+    LEFT JOIN {{ source('contoso_retail_dw', 'DimGeography') }} G
         ON C.GEOGRAPHYKEY = G.GEOGRAPHYKEY
     GROUP BY G.REGIONCOUNTRYNAME
 )

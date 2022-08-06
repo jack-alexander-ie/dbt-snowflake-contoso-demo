@@ -7,7 +7,7 @@ sources:
     database: jackm_contoso
     schema: contoso_retail_dw_dbo
     tables:
-      - name: dimcustomer
+      - name: DimCustomer
         description: 'PII about the customers'
-      - name: dimgeography
+      - name: DimGeography
         decription: 'Region-based metadata'
