@@ -17,10 +17,9 @@ models:
           materialized: view
 
 vars:
-    # Fivetran Salesforce dbt package vars
+    # Salesforce reporting package
     salesforce_database: JACKM_CONTOSO    
     salesforce_schema: SALESFORCE
-    ## Model config
     salesforce__manager_performance: false
     salesforce__owner_performance: false
     salesforce__sales_snapshot: true
@@ -32,4 +31,4 @@ vars:
 
 clean-targets:
     - "target"
-    - "dbt_modules"
+    - "dbt_packages"
