@@ -7,24 +7,28 @@ profile: 'dbt_snowflake_contoso_demo'
 model-paths: ["models"]
 test-paths: ["tests"]
 
-target-path: "target"  # directory which will store compiled SQL files
+target-path: "target"
 
 models:
   dbt_snowflake_contoso_demo:
       # Applies to all files under models/sources
       sources:
+        contoso_retail:
+          +enabled: true
+          materialized: table
         salesforce:
+          +enabled: false
           materialized: view
-
 vars:
     # Salesforce reporting package
     salesforce_database: JACKM_CONTOSO    
     salesforce_schema: SALESFORCE
-    salesforce__manager_performance: false
-    salesforce__owner_performance: false
     salesforce__sales_snapshot: true
     salesforce__opportunity_enhanced: true
     salesforce__contact_enhanced: true
+
+    salesforce__manager_performance: false
+    salesforce__owner_performance: false
     salesforce__daily_activity: false
     salesforce__opportunity_line_item_enhanced: false
     salesforce__order_enabled: false
