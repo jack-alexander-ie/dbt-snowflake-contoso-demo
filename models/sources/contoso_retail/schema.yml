@@ -4,3 +4,4 @@ models:
   - name: contoso_retail_customer_snapshot
   - name: contoso_retail_country_customer_snapshot
   - name: contoso_retail_strategy_plan
+  - name: contoso_retail_sales_overview
