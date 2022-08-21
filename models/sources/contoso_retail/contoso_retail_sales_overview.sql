@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH sales_overview AS (
   SELECT 
       DATE_TRUNC(MONTH, FS.DATEKEY) AS MONTH,
