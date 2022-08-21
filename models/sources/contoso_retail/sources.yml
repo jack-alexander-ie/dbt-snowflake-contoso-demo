@@ -17,9 +17,6 @@ sources:
       - name: DimGeography
         identifier: DIMGEOGRAPHY
         loaded_at_field: _fivetran_synced
-      - name: FactStrategyPlan
-        identifier: FACTSTRATEGYPLAN
-        loaded_at_field: _fivetran_synced
       - name: DimAccount 
         identifier: DIMACCOUNT
         loaded_at_field: _fivetran_synced
@@ -31,4 +28,16 @@ sources:
         loaded_at_field: _fivetran_synced
       - name: DimEntity
         identifier: DIMENTITY
+        loaded_at_field: _fivetran_synced
+      - name: DimStore
+        identifier: DIMSTORE
+        loaded_at_field: _fivetran_synced
+      - name: DimChannel
+        identifier: DIMCHANNEL
+        loaded_at_field: _fivetran_synced
+      - name: FactSales
+        identifier: FACTSALES
+        loaded_at_field: _fivetran_synced
+      - name: FactStrategyPlan
+        identifier: FACTSTRATEGYPLAN
         loaded_at_field: _fivetran_synced
