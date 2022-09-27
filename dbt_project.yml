@@ -14,6 +14,9 @@ models:
       # Applies to all files under models/sources
       sources:
         contoso_retail:
+          +enabled: false
+          materialized: table
+        fivetran_log:
           +enabled: true
           materialized: table
         salesforce:
@@ -23,9 +26,9 @@ vars:
     # Salesforce reporting package
     salesforce_database: JACKM_CONTOSO    
     salesforce_schema: SALESFORCE
-    salesforce__sales_snapshot: true
-    salesforce__opportunity_enhanced: true
-    salesforce__contact_enhanced: true
+    salesforce__sales_snapshot: false
+    salesforce__opportunity_enhanced: false
+    salesforce__contact_enhanced: false
 
     salesforce__manager_performance: false
     salesforce__owner_performance: false

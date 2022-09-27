@@ -1,0 +1,15 @@
+version: 2
+    
+sources:
+  - name: fivetran_log
+    schema: fivetran_log
+    database: jackm_contoso
+    loader: fivetran
+    loaded_at_field: _fivetran_synced
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    tables:
+      - name: account
+        identifier: account
+        loaded_at_field: _fivetran_synced
